@@ -1,13 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QR Code Server</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Language Station Ukraine</title>
+
+  <!-- Plyr CSS -->
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
-    <H1> Language Station </H1>
-    
+  <div class="container">
+    <!-- Title -->
+    <h1>
+      Language Station
+    </h1>
+
+    <h3>
+        Ukraine: Nikolai Saifulin,<br>
+      Try and Learn These Russian Phrases:
+    </h3>
+
+    <!-- Audio player -->
+    <div class="audio-player">
+      <audio id="player" controls>
+        <source src="/Nikolai Saifulin.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <!-- Exit button -->
+    <button class="exit-button" id="exitButton">Exit</button>
+  </div>
+
+  <!-- Plyr JS -->
+  <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+
+  <!-- Initialize Plyr -->
+  <script>
+    const player = new Plyr('#player');
+  </script>
+
+  <!-- Exit button functionality -->
+  <script>
+    document.getElementById("exitButton").addEventListener("click", function() {
+      window.close();
+    });
+  </script>
 </body>
 </html>
